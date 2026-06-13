@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Faezeh Siavashi, Ph.D.</title>
-  <meta name="description" content="Researcher in AI safety verification, MBSE, and embedded systems.">
+  <meta name="description" content="Systems Engineer — MBSE, functional safety (ISO 26262), and automotive software platform integration.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <style>
@@ -366,7 +366,15 @@
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
       nav { padding: 0 1.2rem; }
-      .nav-links { gap: 1.2rem; }
+      .nav-links {
+        gap: 1rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 2px;
+      }
+      .nav-links::-webkit-scrollbar { display: none; }
+      .nav-links li { flex-shrink: 0; }
       .hero { padding: 5rem 1.2rem 2rem; }
       .hero-grid { grid-template-columns: 1fr; }
       .hero-avatar-wrap { order: -1; }
@@ -387,9 +395,11 @@
 <nav>
   <a href="#" class="nav-brand">fs.research</a>
   <ul class="nav-links">
-    <li><a href="#research">Research</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#education">Education</a></li>
     <li><a href="#publications">Publications</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -401,14 +411,15 @@
       <div class="hero-eyebrow">MBSE · Automotive · Formal V&amp;V</div>
       <h1 class="hero-name">Faezeh<br><em>Siavashi</em>, Ph.D.</h1>
       <p class="hero-title">
-        Postdoctoral Researcher — McMaster University<br>
-        Systems &amp; Software Engineering · Hamilton, CA
+        Postdoctoral Research Fellow — Systems Engineering<br>
+        McMaster University · Hamilton, ON
       </p>
       <p class="hero-bio">
-        I build methods to make <strong>AI-enabled embedded systems verifiable</strong> — ensuring
-        safety-critical software behaves correctly when the world changes around it.
-        My work spans formal verification, model-based engineering, and runtime assurance,
-        with applications in autonomous vehicles and safety-critical infrastructure.
+        I'm a <strong>Systems Engineer</strong> with 10+ years delivering safety-critical, embedded,
+        and distributed systems for the automotive and medical device domains. My work centers on
+        <strong>Model-Based Systems Engineering</strong>, requirements traceability, and functional
+        safety aligned with <strong>ISO 26262</strong> — currently applied in active collaboration
+        with Stellantis on automotive platform integration.
       </p>
       <div class="hero-links">
         <a class="btn btn-primary" href="https://scholar.google.com/citations?hl=en&user=3LmJakUAAAAJ" target="_blank">
@@ -435,50 +446,52 @@
   </div>
 </div>
 
-<!-- RESEARCH INTERESTS -->
+<!-- AREAS OF EXPERTISE -->
 <section id="research">
-  <div class="section-label">Research Interests</div>
+  <div class="section-label">Areas of Expertise</div>
   <div class="interests-grid reveal">
     <div class="interest-card">
-      <div class="interest-icon">🛡️</div>
-      <div class="interest-title">AI Safety Verification</div>
-      <div class="interest-desc">Dynamic runtime safety verification for AI-enabled autonomous systems in non-stationary environments.</div>
-    </div>
-    <div class="interest-card">
       <div class="interest-icon">⚙️</div>
-      <div class="interest-title">Model-Based Systems Engineering</div>
-      <div class="interest-desc">SysML modeling, AUTOSAR, model-to-model transformation, and traceability across system and software architecture.</div>
+      <div class="interest-title">Model Transformation &amp; MBSE</div>
+      <div class="interest-desc">SysML–AUTOSAR model transformation, interface traceability, and architecture consistency across system and software boundaries.</div>
     </div>
     <div class="interest-card">
-      <div class="interest-icon">🔍</div>
-      <div class="interest-title">Formal Verification</div>
-      <div class="interest-desc">Model-based testing and formal V&amp;V for safety-critical real-time and data-intensive systems.</div>
+      <div class="interest-icon">🛡️</div>
+      <div class="interest-title">Functional Safety (ISO 26262)</div>
+      <div class="interest-desc">HARA, V-model lifecycle, requirements traceability, and system health &amp; safety mechanism verification for embedded platforms.</div>
     </div>
     <div class="interest-card">
       <div class="interest-icon">🚗</div>
-      <div class="interest-title">Automotive &amp; Embedded</div>
-      <div class="interest-desc">AUTOSAR, ISO 26262 compliance, sensor/data pipelines, and embedded platform integration for automotive OEMs.</div>
+      <div class="interest-title">Automotive Platform Integration</div>
+      <div class="interest-desc">Resolving model interoperability across AUTOSAR-based embedded development workflows, in active collaboration with Stellantis.</div>
+    </div>
+    <div class="interest-card">
+      <div class="interest-icon">🔍</div>
+      <div class="interest-title">Software Verification &amp; Testing</div>
+      <div class="interest-desc">Model-based and mutation testing for distributed systems, with a focus on robustness evaluation and reliability.</div>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <div class="section-label">Experience &amp; Education</div>
+  <div class="section-label">Experience</div>
   <div class="timeline reveal">
 
     <div class="timeline-item">
       <div class="tl-date">
         <div class="tl-dot"></div>
-        2022 – present
+        Jun 2022 – Present
       </div>
       <div>
-        <div class="tl-role">Postdoctoral Researcher</div>
-        <div class="tl-org">McMaster University · McSCert · Hamilton, CA</div>
+        <div class="tl-role">Postdoctoral Research Fellow — Systems Engineering</div>
+        <div class="tl-org">McMaster University · Hamilton, ON</div>
         <div class="tl-desc">
-          Collaborative research with Stellantis on model incompatibility challenges in
-          Model-Based Systems Engineering. Leading system-to-software model transformation
-          and managing cross-team deliverables. Recipient of the TCSE Distinguished Award (2024).
+          Partner with Stellantis on automotive software platform integration, resolving model
+          interoperability across AUTOSAR-based development workflows. Lead design and validation
+          of SysML-based architecture models and model transformation solutions, and author
+          requirements and verification artifacts aligned with ISO 26262. Recognized with the
+          TCSE Distinguished Synergy Award (2024).
         </div>
       </div>
     </div>
@@ -486,15 +499,15 @@
     <div class="timeline-item">
       <div class="tl-date">
         <div class="tl-dot"></div>
-        2016 – 2020
+        Jan 2022 – Aug 2022
       </div>
       <div>
-        <div class="tl-role">Doctor of Science (Technology)</div>
-        <div class="tl-org">Åbo Akademi University · Software Engineering · Finland</div>
+        <div class="tl-role">Data Engineer</div>
+        <div class="tl-org">CubiCasa · Helsinki, Finland</div>
         <div class="tl-desc">
-          Research on model-driven engineering and model-based testing for safety-critical
-          real-time systems. Projects in megamodelling at runtime and practical applications
-          of model-based technologies to continuous integration.
+          Designed sensor data annotation pipelines for perception model training datasets, and
+          built APIs and web services for automated model benchmarking and performance evaluation
+          across machine learning pipelines.
         </div>
       </div>
     </div>
@@ -502,18 +515,74 @@
     <div class="timeline-item">
       <div class="tl-date">
         <div class="tl-dot"></div>
-        Prior
+        Aug 2020 – Jan 2022
       </div>
       <div>
-        <div class="tl-role">Research &amp; Engineering Roles</div>
-        <div class="tl-org">CubiCasa · GE Healthcare · Academia</div>
+        <div class="tl-role">Lead Software Engineer</div>
+        <div class="tl-org">Wishadish Oy · Espoo, Finland</div>
         <div class="tl-desc">
-          Sensor data annotation pipelines for perception model training (CubiCasa);
-          safety-critical embedded medical systems with V-model traceability (GE Healthcare).
+          Architected microservices and distributed system components for smart city mobility
+          platforms, defining service interfaces and integration contracts. Set technical
+          roadmaps, mentored junior engineers, and coordinated delivery across Agile sprints.
         </div>
       </div>
     </div>
 
+    <div class="timeline-item">
+      <div class="tl-date">
+        <div class="tl-dot"></div>
+        Mar 2019 – May 2020
+      </div>
+      <div>
+        <div class="tl-role">Software Automation Engineer</div>
+        <div class="tl-org">GE Healthcare · Helsinki, Finland</div>
+        <div class="tl-desc">
+          Developed automated test frameworks for safety-critical embedded medical monitoring
+          devices — alarm management, vital sign measurement, and blood pressure modules —
+          with system-level test suites traceable to functional safety requirements under
+          IEC 62304 and V-model lifecycle verification.
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-date">
+        <div class="tl-dot"></div>
+        Jan 2014 – Apr 2020
+      </div>
+      <div>
+        <div class="tl-role">Researcher / Ph.D. Candidate — Software Engineering</div>
+        <div class="tl-org">Åbo Akademi University · Turku, Finland</div>
+        <div class="tl-desc">
+          Developed model-based testing frameworks for distributed web services, including
+          mutation testing and robustness evaluation techniques, with experimental validation
+          published in peer-reviewed venues.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-label">Education</div>
+  <div class="interests-grid reveal">
+    <div class="interest-card">
+      <div class="interest-icon">🎓</div>
+      <div class="interest-title">Ph.D., Software Engineering</div>
+      <div class="interest-desc">Åbo Akademi University · Finland</div>
+    </div>
+    <div class="interest-card">
+      <div class="interest-icon">🎓</div>
+      <div class="interest-title">M.Sc., Embedded Computing</div>
+      <div class="interest-desc">Åbo Akademi University · Finland</div>
+    </div>
+    <div class="interest-card">
+      <div class="interest-icon">🎓</div>
+      <div class="interest-title">B.Sc., Software Engineering</div>
+      <div class="interest-desc">Azad University of Tehran · Iran</div>
+    </div>
   </div>
 </section>
 
@@ -523,10 +592,10 @@
   <div class="pub-list reveal">
 
     <div class="pub-card">
-      <div class="pub-venue">SoSyM · Springer · 2026</div>
+      <div class="pub-venue">Journal · SoSyM 2026</div>
       <div class="pub-title">
-        <a href="https://link.springer.com/epdf/10.1007/s10270-026-01376-8?sharing_token=17pGio7WJj8euUdbZW-UoPe4RwlQNchNByi7wbcMAY6HTDiPJahNff3Mg_XaE6yuAci3LCgypNwnYROYk04whNA6OXJGiquc628qjV7vN2lc70qtlCVQnI2c-c5BeVVVHeJaErXRVq6gg9xigNWQwx3F_zdeDT1xfyTfk3t4psk%3D" target="_blank">
-          System-to-Software Model Transformation in MBSE
+        <a href="https://doi.org/10.1007/s10270-026-01376-8" target="_blank">
+          Integrating SysML and AUTOSAR Model Transformation in Automotive MBSE
         </a>
       </div>
       <div class="pub-authors">F. Siavashi et al. · Software and Systems Modeling</div>
@@ -534,26 +603,56 @@
     </div>
 
     <div class="pub-card">
-      <div class="pub-venue">ISSRE '23 · Nominated: Best Industrial Paper</div>
-      <div class="pub-title">
-        Model-Based Safety Verification for Embedded Systems
-      </div>
+      <div class="pub-venue">Conference · IEEE ISSREW 2024</div>
+      <div class="pub-title">Using Boundary Objects for Continuous Compliance in Automotive Development</div>
       <div class="pub-authors">F. Siavashi et al.</div>
     </div>
 
     <div class="pub-card">
-      <div class="pub-venue">MODELS '23 · MBSE Workshop</div>
-      <div class="pub-title">
-        Practical MBSE: Bridging System and Software Architecture in Automotive Contexts
-      </div>
+      <div class="pub-venue">Conference · IEEE ISSREW 2023</div>
+      <div class="pub-title">Bridging System Architecture and Software Design Using Model Transformation</div>
+      <div class="pub-authors">F. Siavashi et al.</div>
+      <span class="pub-badge">Best Industrial Paper Runner-Up</span>
+    </div>
+
+    <div class="pub-card">
+      <div class="pub-venue">Conference · IEEE QRS 2018</div>
+      <div class="pub-title">Vulnerability Assessment of Web Services with Model-Based Mutation Testing</div>
       <div class="pub-authors">F. Siavashi et al.</div>
     </div>
 
   </div>
   <div style="margin-top: 1.5rem;">
     <a class="btn btn-ghost" href="https://scholar.google.com/citations?hl=en&user=3LmJakUAAAAJ" target="_blank">
-      View all 82+ citations on Google Scholar ↗
+      View all publications on Google Scholar ↗
     </a>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="section-label">Awards &amp; Recognition</div>
+  <div class="news-list reveal">
+    <div class="news-item">
+      <span class="news-date">2024</span>
+      <span class="news-text"><strong>TCSE Distinguished Synergy Award</strong> — for industry collaboration with Stellantis (McSCert).</span>
+    </div>
+    <div class="news-item">
+      <span class="news-date">2023</span>
+      <span class="news-text"><strong>Best Industrial Paper Runner-Up</strong> — International Symposium on Software Reliability Engineering (ISSRE).</span>
+    </div>
+    <div class="news-item">
+      <span class="news-date">2016</span>
+      <span class="news-text"><strong>Best Student Paper Award</strong> — International Conference on Software Engineering and Applications (ICSEA).</span>
+    </div>
+    <div class="news-item">
+      <span class="news-date">2016</span>
+      <span class="news-text"><strong>Grace Hopper Scholarship</strong> — Women in Computing Conference.</span>
+    </div>
+    <div class="news-item">
+      <span class="news-date">2015</span>
+      <span class="news-text"><strong>Research Excellence Award</strong> — Ulla Tuominen Research Foundation.</span>
+    </div>
   </div>
 </section>
 
@@ -562,44 +661,67 @@
   <div class="section-label">Technical Skills</div>
   <div class="skills-grid reveal">
     <div>
-      <div class="skill-group-title">Systems Engineering</div>
+      <div class="skill-group-title">Functional Safety &amp; Systems Eng.</div>
+      <div class="skill-tags">
+        <span class="tag">ISO 26262</span>
+        <span class="tag">HARA</span>
+        <span class="tag">Safety-Critical Verification</span>
+        <span class="tag">V-Model Lifecycle</span>
+        <span class="tag">Requirements Traceability</span>
+        <span class="tag">Interface Definitions</span>
+        <span class="tag">Architecture Analysis</span>
+        <span class="tag">Safety Mechanisms</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-title">Platform Domains</div>
+      <div class="skill-tags">
+        <span class="tag">AUTOSAR</span>
+        <span class="tag">Embedded / Real-Time</span>
+        <span class="tag">Distributed Middleware</span>
+        <span class="tag">Sensor/Data Pipelines</span>
+        <span class="tag">SOA</span>
+        <span class="tag">Microservices</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-title">MBSE &amp; Modeling Tools</div>
       <div class="skill-tags">
         <span class="tag">SysML</span>
-        <span class="tag">AUTOSAR</span>
-        <span class="tag">MBSE</span>
-        <span class="tag">DOORS/DNG</span>
         <span class="tag">IBM Rhapsody</span>
         <span class="tag">PREEvision</span>
+        <span class="tag">DOORS</span>
+        <span class="tag">Model-Based V&amp;V</span>
+        <span class="tag">Model Transformation</span>
+        <span class="tag">Eclipse</span>
       </div>
     </div>
     <div>
-      <div class="skill-group-title">Verification &amp; Safety</div>
-      <div class="skill-tags">
-        <span class="tag">Formal Methods</span>
-        <span class="tag">Model-Based Testing</span>
-        <span class="tag">Runtime V&amp;V</span>
-        <span class="tag">ISO 26262</span>
-        <span class="tag">V-Model</span>
-      </div>
-    </div>
-    <div>
-      <div class="skill-group-title">Software &amp; Tools</div>
+      <div class="skill-group-title">Software &amp; Programming</div>
       <div class="skill-tags">
         <span class="tag">Python</span>
-        <span class="tag">Java</span>
         <span class="tag">C/C++</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">PowerShell</span>
+        <span class="tag">Bash</span>
+        <span class="tag">API Development</span>
+      </div>
+    </div>
+    <div>
+      <div class="skill-group-title">DevOps &amp; Infrastructure</div>
+      <div class="skill-tags">
         <span class="tag">Git</span>
         <span class="tag">Docker</span>
         <span class="tag">CI/CD</span>
+        <span class="tag">AWS</span>
       </div>
     </div>
     <div>
-      <div class="skill-group-title">Architectures</div>
+      <div class="skill-group-title">Development Practices</div>
       <div class="skill-tags">
-        <span class="tag">SOA</span>
-        <span class="tag">Microservices</span>
-        <span class="tag">Distributed Systems</span>
-        <span class="tag">API Design</span>
+        <span class="tag">Agile</span>
+        <span class="tag">Scrum</span>
+        <span class="tag">Kanban</span>
       </div>
     </div>
   </div>
@@ -611,19 +733,15 @@
   <div class="news-list reveal">
     <div class="news-item">
       <span class="news-date">May 2026</span>
-      <span class="news-text">Journal paper published in <a href="https://link.springer.com/epdf/10.1007/s10270-026-01376-8?sharing_token=17pGio7WJj8euUdbZW-UoPe4RwlQNchNByi7wbcMAY6HTDiPJahNff3Mg_XaE6yuAci3LCgypNwnYROYk04whNA6OXJGiquc628qjV7vN2lc70qtlCVQnI2c-c5BeVVVHeJaErXRVq6gg9xigNWQwx3F_zdeDT1xfyTfk3t4psk%3D" target="_blank">Software and Systems Modeling (Springer)</a>.</span>
+      <span class="news-text">New journal paper published in <a href="https://doi.org/10.1007/s10270-026-01376-8" target="_blank">Software and Systems Modeling (SoSyM)</a>.</span>
     </div>
     <div class="news-item">
-      <span class="news-date">Feb 2024</span>
-      <span class="news-text">Our team at McSCert received the prestigious <strong>TCSE Distinguished Award</strong> 🎉</span>
+      <span class="news-date">2024</span>
+      <span class="news-text">Our team at McSCert received the <strong>TCSE Distinguished Synergy Award</strong> for the Stellantis collaboration 🎉</span>
     </div>
     <div class="news-item">
-      <span class="news-date">Oct 2023</span>
-      <span class="news-text">Paper nominated for <strong>Best Industrial Paper</strong> at ISSRE'23.</span>
-    </div>
-    <div class="news-item">
-      <span class="news-date">Aug 2023</span>
-      <span class="news-text">Paper accepted at MBSE Workshop at MODELS'23.</span>
+      <span class="news-date">2024</span>
+      <span class="news-text">New paper published at <strong>IEEE ISSREW 2024</strong>: "Using Boundary Objects for Continuous Compliance in Automotive Development."</span>
     </div>
   </div>
 </section>
@@ -632,12 +750,12 @@
 <section id="contact">
   <div class="section-label">Contact</div>
   <p class="reveal" style="color: #9099af; font-size: 15px; max-width: 480px;">
-    Open to research collaborations, industry partnerships, and conversations about
-    AI safety verification and embedded systems engineering.
+    Open to roles and collaborations in systems engineering, MBSE, and functional safety
+    for automotive and embedded platforms.
   </p>
   <div class="contact-row reveal">
-    <a class="contact-link" href="mailto:siavashf@mcmaster.ca">
-      ✉ siavashf@mcmaster.ca
+    <a class="contact-link" href="mailto:fasiava@gmail.com">
+      ✉ fasiava@gmail.com
     </a>
     <a class="contact-link" href="https://linkedin.com/in/faezeh-siavashi" target="_blank">
       in LinkedIn
@@ -653,7 +771,7 @@
 
 <footer>
   <span>Faezeh Siavashi, Ph.D. · fasia.github.io</span>
-  <span>Hamilton, CA · 2026</span>
+  <span>Hamilton, ON · 2026</span>
 </footer>
 
 <script>
